@@ -40,7 +40,7 @@ for i in range(len(y)):
 	else:
 		plt.plot(x[i,1],x[i,7],'gx')
 
-a=0.259
+a=0.265
 cnt=0
 thetas=np.zeros_like(x[0,:])
 thetas=np.array(thetas)
