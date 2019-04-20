@@ -66,8 +66,11 @@ def predict_k(theta,x):
 	#print(p[:,0])
 	cnt_y=(np.array([p[:,i] for i in range(10)])>=0.5).astype(int)
 	#cnt_y0=(p[:,0]>=0.5).astype(int)print(cnt_y.shape)
+<<<<<<< HEAD
 	print(cnt_y.shape)
 	print(y.shape)
+=======
+>>>>>>> c32db1eb2ffd77153fa053cd7a155c4119253c2d
 	print(np.mean([cnt_y[i,:]==y[i] for i in range(10)],axis=1))
 raw_X,raw_y=load_data(path)
 X=np.insert(raw_X,0,values=np.ones_like(raw_X.shape[0]),axis=1)
@@ -75,10 +78,17 @@ y_mat=[]
 #raw_y=np.array([1,2,3,4,5])
 for k in range(1,11):
 	y_mat.append((raw_y==k).astype(int))
+<<<<<<< HEAD
 print(y_mat)
 y_mat=[y_mat[-1]]+y_mat[:-1]
 y=np.array(y_mat)
 print(y)
+=======
+#print(y_mat)
+#y_mat=[y_mat[-1]]+y_mat[:-1]
+y=np.array(y_mat)
+#print(y.shape)
+>>>>>>> c32db1eb2ffd77153fa053cd7a155c4119253c2d
 '''theta=np.array([2,2,2,2,2])x=np.array([[1,1,1,1,1],[2,2,2,2,2]])print(sigmoid(theta,x).shape)print(theta.shape)print(np.dot(sigmoid(theta,x),x))print(np.dot(x.T,sigmoid(theta,x)))'''
 theta=logistic_regression(X,y[0])
 #print(theta)
