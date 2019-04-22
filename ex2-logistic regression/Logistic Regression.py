@@ -38,8 +38,4 @@ print(thetas)
 t=np.linspace(np.min(data[:,0]),np.max(data[:,1]),80)
 y=-(thetas[0]+thetas[1]*t)/(thetas[2])
 plt.plot(t,y)
-<<<<<<< HEAD
 plt.show()
-=======
-plt.show()
->>>>>>> c32db1eb2ffd77153fa053cd7a155c4119253c2d
